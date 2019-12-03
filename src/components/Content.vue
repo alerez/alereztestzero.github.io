@@ -38,7 +38,7 @@
          return{
              tasksDay: 'TODAY',
              postOne:{
-                 Text:'Darika Samak mark as done Listing on Product Hunt so that\n' +
+                 Text:'Darika Samak mark as done L isting on Product Hunt so that\n' +
                      '                we can reach as many potential users',
                  Time: '8:40 PM'
              },

@@ -18,8 +18,8 @@
         </div>
 
         <div class="work">
-            <div class="one res">
-                <span class="completed">{{work.numCompleted}}</span>
+            <div class="one res" v-click="" >
+                <span class="completed" @click="click()">{{work.numCompleted}}</span>
                 <p>{{work.Completed}}</p>
             </div>
             <div class="res two">
@@ -38,7 +38,11 @@
 </template>
 
 <script>
-    export default {
+import { bus } from "../main";
+console.log(bus);// eslint-disable-line no-console
+console.log(bus);// eslint-disable-line no-console
+console.log(bus);// eslint-disable-line no-console
+export default {
         name: "SideBar",
         data(){
             return{
@@ -52,12 +56,29 @@
                     Open: 'Open Tasks',
                     numOpen: '11',
                 },
-
                 MENU: 'menu',
                 HOME: 'home',
                 MyTasks: 'My Tasks',
                 Notifications: 'Notifications',
-                numNot: '0',
+                numNot: ' '
+            }
+        },
+        created(){
+            bus.$on('message', data => {
+                this.numNot = data;
+            })
+        },
+        methods: {
+            click(){
+                    if(this.work.numOpen !== 0){
+                        if(confirm('Are you sure you want to change the number of tasks?')){
+                            this.work.numCompleted++;
+                            this.work.numOpen--;
+                        }
+                    }
+                    else{
+                        alert('No :)')
+                    }
             }
         }
     }

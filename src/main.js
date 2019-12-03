@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from './Layout.vue';
-import router from "./router";
-import './assets/scss/style.css';
+import router from './router';
+//import './assets/scss/style.css';
 import './assets/scss/style.scss';
+
+export const bus = new Vue();
 
 
 Vue.config.productionTip = false
