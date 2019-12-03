@@ -1,20 +1,32 @@
 <template>
     <div class="world">
-        <div class="img0">
-            <img src="../../assets/img/world/0.jpg" alt="city">
-            <img src="../../assets/img/world/1.jpg" alt="lake">
-        </div>
-        <div class="img0">
-            <img src="../../assets/img/world/3.jpg" alt="beach">
-            <img src="../../assets/img/world/2.jpg" alt="beach sea">
-        </div>
+        <img v-for="(world, index) in images"
+             :key="index"
+             :src="world.image"
+             @click="imgClick(index)"
+        >
     </div>
 </template>
 
 <script>
+    import { bus } from "../../main";
+
     export default {
-        name: "Img",
-        
+        data() {
+            return {
+                images: [
+                    {image: require('../../assets/img/world/0.jpg')},
+                    {image: require('../../assets/img/world/1.jpg')},
+                    {image: require('../../assets/img/world/2.jpg')},
+                    {image: require('../../assets/img/world/3.jpg')},
+                ],
+            }
+        },
+        methods: {
+            imgClick(index) {
+                bus.$emit('message', index);
+            }
+        }
     }
 
 </script>
