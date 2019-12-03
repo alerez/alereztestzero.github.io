@@ -11,22 +11,22 @@
 </template>
 
 <script>
-  //import Content from './components/Content';
-  import Header from "./components/Header";
-  import SideBar from "./components/SideBar";
+// import Content from './components/Content';
+import Header from './components/Header';
+import SideBar from './components/SideBar';
 
-  //mport Tasks from "./components/nav/Tasks";
-  //import Activity from "./components/nav/Activity";
+// mport Tasks from "./components/nav/Tasks";
+// import Activity from "./components/nav/Activity";
 
 export default {
   name: 'Layout',
   components: {
-      SideBar,
-      Header,
-      //Content
-  }
+    SideBar,
+    Header,
+    // Content
+  },
 
-}
+};
 </script>
 
 <style>

@@ -27,24 +27,22 @@
 <script>
 export default {
   name: 'tasks',
-  data(){
-        return{
-            WebsiteRedesing: 'Website Redesing',
+  data() {
+    return {
+      WebsiteRedesing: 'Website Redesing',
 
-            Share: 'Share',
-            Chat: 'Chat',
+      Share: 'Share',
+      Chat: 'Chat',
 
-            Tasks: 'Tasks',
-            Kanban: 'Kenban',
-            Activity: 'Activity',
-            Calendar: 'Calendar',
-            Files: 'Files'
+      Tasks: 'Tasks',
+      Kanban: 'Kenban',
+      Activity: 'Activity',
+      Calendar: 'Calendar',
+      Files: 'Files',
 
-        }
-
-
-  }
-}
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
